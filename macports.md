@@ -73,6 +73,7 @@
 44. py35-mpi4py +gcc5 +openmpi
 
 44.1 py35-cython
+
      sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/cython /opt/local/bin/cython3
      
 #### Other useful GIS stuff
