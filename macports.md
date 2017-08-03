@@ -72,6 +72,9 @@
    - sudo port select --set ipython3 py35-ipython
 44. py35-mpi4py +gcc5 +openmpi
 
+44.1 py35-cython
+     sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/cython /opt/local/bin/cython3
+     
 #### Other useful GIS stuff
 45. gmt5 kealib pandoc
 46. zmq py27-zmq py35-zmq
