@@ -17,6 +17,10 @@
 1. Install XCode from App store
 2. Install command line tools from within XCode
    - sudo xcode-select --install   (This will install command line tools)
+   
+   Note: For latest Sierra 10.12.6 you may do this:
+   sudo xcode-select -s PATH_TO_Your_Xcode/Xcode-beta.app/Contents/Developer/
+   
 3. sudo xcodebuild -license
    - Agree to the terms of license
 4. Install XQuartz
