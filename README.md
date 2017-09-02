@@ -3,12 +3,14 @@
 
 #### Before you start
 ----------
-1. Google chrome
-2. Alfred 2
-3. Keepass-X
-4. iTerm2
-5. CyberDuck (ftp client) 
-6. All OS updates from App store (Restart if needed)
+1. Google Chrome
+2. [Google Earth Pro](https://www.google.com/earth/resources/)
+3. [Github Desktop](https://desktop.github.com)
+4. Alfred 2
+5. Keepass-X
+6. iTerm2
+7. CyberDuck (ftp client) 
+8. All OS updates from App store (Restart if needed)
 
 
 #### Macports
