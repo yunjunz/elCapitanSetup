@@ -66,11 +66,6 @@ For instructions see [here](./macports.md)
 - Install textwrangler command line tools (includes twdiff for comparing files / folders)
 - twdiff appears to be better than other diff tools that are available 
 
-##### Google Earth Pro
-----------------------
-- Google Earth Pro is now free
-- Sign in with your email and password: GEPFREE
-
 ##### Environment modules
 --------------------------
 - Follow instructions [here](./modules.md)
