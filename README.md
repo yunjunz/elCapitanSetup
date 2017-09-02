@@ -1,4 +1,4 @@
-## Instructions for setting up an OS X El Capitan machine from scratch
+## Instructions for setting up an OS X Sierra machine from scratch
 ------------
 
 #### Before you start
@@ -15,15 +15,14 @@
 ---------
 
 1. Install XCode from App store
-2. Install command line tools from within XCode
-   - sudo xcode-select --install   (This will install command line tools)
-   
-   Note: For latest Sierra 10.12.6 you may do this:
-   sudo xcode-select -s PATH_TO_Your_Xcode/Xcode-beta.app/Contents/Developer/
-   
+2. Install command line tools from within XCode.   
+
+```bash
+> xcode-select --install -s /Applications/Xcode.app/Contents/Developer/ 
+```   
 3. sudo xcodebuild -license
    - Agree to the terms of license
-4. Install XQuartz
+4. Install [XQuartz](https://www.xquartz.org)
    - Will need to log out and log back in
 5. Install macports
    - sudo port selfupdate
