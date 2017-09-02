@@ -23,8 +23,10 @@
 ```   
 3. Install [XQuartz](https://www.xquartz.org)
    - Will need to log out and log back in
-4. Install macports
-   - sudo port selfupdate
+4. Install [macports](https://www.macports.org/install.php)
+```bash
+> sudo port selfupdate
+``` 
 5. Restart terminal
 
 ##### Option 1: Automated installation  (Not extensively tested ...)
