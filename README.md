@@ -15,18 +15,17 @@
 ---------
 
 1. Install XCode from App store
-2. Install command line tools from within XCode.   
+2. Install command line tools from within XCode and agree to the terms of license.   
 
 ```bash
 > xcode-select --install -s /Applications/Xcode.app/Contents/Developer/ 
+> sudo xcodebuild -license 
 ```   
-3. sudo xcodebuild -license
-   - Agree to the terms of license
-4. Install [XQuartz](https://www.xquartz.org)
+3. Install [XQuartz](https://www.xquartz.org)
    - Will need to log out and log back in
-5. Install macports
+4. Install macports
    - sudo port selfupdate
-6. Restart terminal
+5. Restart terminal
 
 ##### Option 1: Automated installation  (Not extensively tested ...)
 -----------
