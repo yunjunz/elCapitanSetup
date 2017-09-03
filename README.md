@@ -10,6 +10,7 @@
 5. [Keepass-X](https://www.keepassx.org/downloads)
 6. iTerm2
 7. CyberDuck (ftp client) 
+8. [Github Desktop](https://desktop.github.com)
 8. All OS updates from App store (Restart if needed)
 
 
