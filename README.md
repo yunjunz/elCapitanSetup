@@ -7,7 +7,7 @@
 2. [Google Earth Pro](https://www.google.com/earth/resources/)
 3. [Github Desktop](https://desktop.github.com)
 4. Alfred 2
-5. Keepass-X
+5. [Keepass-X](https://www.keepassx.org/downloads)
 6. iTerm2
 7. CyberDuck (ftp client) 
 8. All OS updates from App store (Restart if needed)
