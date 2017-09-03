@@ -6,9 +6,9 @@
 1. Google Chrome
 2. [Google Earth Pro](https://www.google.com/earth/resources/)
 3. [Github Desktop](https://desktop.github.com)
-4. Alfred 2
+4. [Alfred 3](https://www.alfredapp.com)
 5. [Keepass-X](https://www.keepassx.org/downloads)
-6. iTerm2
+6. [iTerm2](https://www.iterm2.com/downloads.html)
 7. CyberDuck (ftp client) 
 8. [Github Desktop](https://desktop.github.com)
 8. All OS updates from App store (Restart if needed)
