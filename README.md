@@ -1,5 +1,4 @@
 ## Instructions for setting up an OS X Sierra machine from scratch
-------------
 
 #### Before you start
 ----------
