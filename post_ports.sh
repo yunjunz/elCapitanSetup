@@ -13,7 +13,7 @@ sudo port select gcc mp-gcc5
 
 ####Set python27 as default python
 sudo port select python python27
-
+sudo port select python3 python36
 
 ####Since python27 is default python - Python3.5 wont be available in default directories
 ####So create links to make this happen
