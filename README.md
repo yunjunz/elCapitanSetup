@@ -28,7 +28,10 @@
 4. Install [macports](https://www.macports.org/install.php)
 ```bash
 > sudo port selfupdate
-``` 
+```
+
+Try [Portfile Sync via a Snapshot Tarball](https://trac.macports.org/wiki/howto/PortTreeTarball), if your network prevent the use of rsync or svn via http of port tree.
+
 5. Restart terminal
 
 ##### Option 1: Automated installation  (Not extensively tested ...)
