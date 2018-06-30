@@ -89,8 +89,8 @@ py27-pyproj
 py27-cartopy 
 py27-fiona 
 py27-matplotlib-basemap
-py35-numpy +gcc5 
-py35-scipy +gcc5 
+py35-numpy +gcc5 +openblas
+py35-scipy +gcc5 +openblas
 py35-matplotlib +cairo +tkinter
 py35-matplotlib-basemap
 py35-pandas
