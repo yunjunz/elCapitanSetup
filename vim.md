@@ -1,6 +1,6 @@
 Add this at the top of ~/.vimrc    
      
-     "syntax
+    "syntax
     syntax on
     
     "General useful settings
@@ -22,4 +22,4 @@ Add this at the top of ~/.vimrc
     set tabstop=8
     set shiftwidth=4
     set softtabstop=4
-set expandtab
+    set expandtab
