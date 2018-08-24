@@ -10,6 +10,7 @@
 6. [iTerm2](https://www.iterm2.com/downloads.html)
 7. CyberDuck (ftp client) 
 8. [Github Desktop](https://desktop.github.com)
+9. [InsomniaX](https://download.cnet.com/InsomniaX/3000-2094_4-97713.html) (Disable sleep mode when lid closed)
 8. All OS updates from App store (Restart if needed)
 
 
