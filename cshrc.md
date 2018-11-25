@@ -9,6 +9,7 @@ Add this to the top of ~/.cshrc file:
     
     setenv INSAR_HOME    ~/insarlab
     setenv DEV_DIR       ~/development
+    setenv UTILS_DIR     ${DEV_DIR}/UTILITIES
     setenv WEATHER_DIR   ${INSAR_HOME}/WEATHER
     
     ##########################  Alias  #################################
@@ -19,7 +20,7 @@ Add this to the top of ~/.cshrc file:
     alias ff     'find . -name \*\!*\* -print'
     alias rrsync 'rsync -avzh --progress'
     alias igrep  'grep -rn --color'
-    alias rm     ${UTILITIESDIR}/shell-safe-rm/bin/rm.sh
+    alias rm     ${UTILS_DIR}/shell-safe-rm/bin/rm.sh
     
     ############################  Python  ###############################
     if ( ! $?PYTHONPATH ) then
