@@ -7,9 +7,9 @@ Add this to the top of ~/.cshrc file:
     set history=1000
     set savehist=(1000 merge)
     
-    setenv INSARLABHOME    ~/insarlab
-    setenv DEVELOPMENTDIR  ~/development
-    setenv UTILITIESDIR    $DEVELOPMENTDIR/UTILITIES
+    setenv INSAR_HOME    ~/insarlab
+    setenv DEV_DIR       ~/development
+    setenv WEATHER_DIR   ${INSAR_HOME}/WEATHER
     
     ##########################  Alias  #################################
     alias sou    'source ~/.cshrc'
@@ -28,17 +28,18 @@ Add this to the top of ~/.cshrc file:
     setenv PYTHONSTARTUP    ~/.pystartup
     alias pybook 'cd ~/development/python; jupyter notebook'
     
-    ##--------- Anaconda ---------------## 
-    setenv PYTHON3DIR       ${DEVELOPMENTDIR}/python/anaconda3
+    ##--------- conda ------------------## 
+    setenv PYTHON3DIR       ${DEV_DIR}/python/miniconda3
     setenv PATH             ${PYTHON3DIR}/bin:${PATH}
+    setenv PROJ_LIB         ${PYTHON3DIR}/share/proj   #Temporary fix
     
     ##--------- PySAR ------------------## 
-    setenv PYSAR_HOME       ${DEVELOPMENTDIR}/python/PySAR
+    setenv PYSAR_HOME       ${DEV_DIR}/python/PySAR
     setenv PYTHONPATH       ${PYSAR_HOME}:${PYTHONPATH}
     setenv PATH             ${PYSAR_HOME}/pysar:${PYSAR_HOME}/sh:${PATH}
     
     ##--------- PyAPS ------------------## 
-    setenv PYAPS_HOME       ${DEVELOPMENTDIR}/python/PyAPS
+    setenv PYAPS_HOME       ${DEV_DIR}/python/PyAPS
     setenv PYTHONPATH       ${PYAPS_HOME}:${PYTHONPATH}
     setenv PATH             ${PYAPS_HOME}/pyaps:${PATH}
     
