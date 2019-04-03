@@ -45,6 +45,12 @@ setenv PYAPS_HOME       ${DEV_DIR}/python/PyAPS
 setenv PYTHONPATH       ${PYAPS_HOME}:${PYTHONPATH}
 setenv PATH             ${PYAPS_HOME}/pyaps:${PATH}
 
+##--------- GIAnT ------------------## 
+setenv GIANT_HOME       ${DEV_DIR}/python/GIAnT/giant
+setenv WEAVE_HOME       ${UTILS_DIR}/weave-dev
+setenv PYTHONPATH       ${GIANT_HOME}:${WEAVE_HOME}:${PYTHONPATH}
+setenv PATH             ${GIANT_HOME}/SCR:${PATH}
+
 ##--------- PySAR ------------------## 
 setenv PYSAR_HOME       ${DEV_DIR}/python/PySAR
 setenv PYTHONPATH       ${PYSAR_HOME}:${PYTHONPATH}
