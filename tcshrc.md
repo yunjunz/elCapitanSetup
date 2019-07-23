@@ -1,0 +1,103 @@
+# vim: set filetype=tcsh:
+setenv VISUAL  /usr/bin/vi
+setenv CLICOLOR 1
+setenv PS1 "\h:\w>: "
+
+# save command history
+set history=1000
+set savehist=(1000 merge)
+
+setenv INSAR_HOME    ~/insarlab
+setenv DEV_DIR       ~/development
+setenv UTILS_DIR     ${DEV_DIR}/UTILITIES
+
+##########################  Alias  #################################
+alias sou    'source ~/.cshrc'
+alias ls     'ls -GFh'
+alias ll     'ls -GFhal'
+alias m      'more'
+alias ff     'find . -name \*\!*\* -print'
+alias rrsync 'rsync -avzh --progress'
+alias igrep  'grep -rn --color \!* * */* */*/* */*/*'
+alias grepy  'grep -rn --color \!* *.py */*.py */*/*.py *.sh */*.sh */*/*.sh *.txt */*.txt */*/*.txt *.cfg */*.cfg */*/*.cfg *.m */*.m */*/*.m'
+#alias grepy  'grep -rn --color \!* *.py */*.py */*/*.py *.ipynb */*.ipynb */*/*.ipynb *.sh */*.sh */*/*.sh *.txt */*.txt */*/*.txt *.cfg */*.cfg */*/*.cfg *.m */*.m */*/*.m'
+alias rm     ${UTILS_DIR}/shell-safe-rm/bin/rm.sh
+#alias replacestr 'sed -i -- '\''s/\!:1/\!:2/g'\'' \!:3'
+#alias ireplacestr 'sed -i -- '\''s/\!:1/\!:2/gc'\'' \!:3'
+alias matlab '/Applications/MATLAB_R2017a.app/bin/matlab'
+
+if ( ! $?MANPATH ) then
+   setenv MANPATH ""
+endif
+
+############################  Python  ###############################
+if ( ! $?PYTHONPATH ) then
+   setenv PYTHONPATH ""
+endif
+setenv PYTHONSTARTUP    ~/.pystartup
+
+##--------- SSARA ------------------##
+setenv SSARA_HOME       ${DEV_DIR}/python/SSARA
+setenv PATH             ${SSARA_HOME}:${SSARA_HOME}/data_utils:${PATH}
+
+##--------- PyAPS ------------------## 
+setenv PYAPS_HOME       ${DEV_DIR}/python/PyAPS
+setenv PYTHONPATH       ${PYAPS_HOME}:${PYTHONPATH}
+
+##--------- GIAnT ------------------## 
+setenv GIANT_HOME       ${DEV_DIR}/python/GIAnT/giant
+setenv WEAVE_HOME       ${UTILS_DIR}/weave-dev
+setenv PYTHONPATH       ${GIANT_HOME}:${WEAVE_HOME}:${PYTHONPATH}
+setenv PATH             ${GIANT_HOME}/SCR:${PATH}
+
+##--------- ISCE -------------------##
+setenv ISCE_HOME        /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/isce
+setenv ISCE_STACK       ${DEV_DIR}/python/isce2/contrib/stack/stripmapStack   #topsStack/stripmapStack, source ONE ONLY at a time to avoid naming conflict.
+setenv PATH             ${ISCE_HOME}/bin:${ISCE_HOME}/applications:${ISCE_STACK}:${PATH}
+setenv DEMDB            ${INSAR_HOME}/DEM
+
+##--------- MintPy -----------------## 
+setenv MINTPY_HOME      ${DEV_DIR}/python/MintPy
+setenv PYTHONPATH       ${MINTPY_HOME}:${PYTHONPATH}
+setenv PATH             ${MINTPY_HOME}/mintpy:${MINTPY_HOME}/sh:${MINTPY_HOME}/isce:${PATH}
+setenv WEATHER_DIR      ${INSAR_HOME}/WEATHER
+
+##--------- ARIA-tools -------------##
+setenv ARIATOOLS_HOME   ${DEV_DIR}/python/ARIA-tools
+setenv PYTHONPATH       ${PYTHONPATH}:${ARIATOOLS_HOME}/tools
+setenv PATH             ${PATH}:${ARIATOOLS_HOME}/tools/bin
+
+
+##--------- option 1 - conda ------------------## 
+#setenv PYTHON2DIR      ${DEV_DIR}/python/miniconda2
+#setenv PATH            ${PYTHON2DIR}/bin:${PATH}
+
+setenv PYTHON3DIR       ${DEV_DIR}/python/miniconda3
+setenv PATH             ${PYTHON3DIR}/bin:${PATH}
+alias ipynb 'cd ~/development/python; jupyter notebook'
+
+##--------- option 2 - MacPorts ---------------##
+# MacPorts Installer addition on 2017-09-02_at_01:27:12: adding an appropriate PATH variable for use with MacPorts.
+#setenv PATH /opt/local/bin:/opt/local/sbin:${PATH}
+#setenv MANPATH /opt/local/share/man:${MANPATH}
+# Finished adapting your PATH environment variable for use with MacPorts.
+#alias ipynb  'cd ~/development; jupyter-notebook-3.6'
+#For py36-pyhdf in macports
+#setenv INCLUDE_DIRS          /opt/local/include
+#setenv LIBRARY_DIRS          /opt/local/lib
+
+setenv GDAL_DRIVER_PATH      /opt/local/lib/gdalplugins
+setenv JAVA_HOME             /Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
+setenv VRT_SHARED_SOURCE            0
+setenv HDF5_DISABLE_VERSION_CHECK   1    # for running GIANT
+setenv HDF5_USE_FILE_LOCKING        FALSE
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if ( -f "/Users/yunjunz/development/python/miniconda3/etc/profile.d/conda.csh" ) then
+    source "/Users/yunjunz/development/python/miniconda3/etc/profile.d/conda.csh"
+else
+    setenv PATH="/Users/yunjunz/development/python/miniconda3/bin:$PATH"
+endif
+# <<< conda initialize <<<
+
