@@ -1,6 +1,3 @@
-Add the following to `~/.tcshrc` file for initial terminal setup.
-
-```tcsh
 # vim: set filetype=tcsh:
 setenv VISUAL  /usr/bin/vi
 setenv CLICOLOR 1
@@ -104,4 +101,3 @@ else
     setenv PATH="/Users/yunjunz/development/python/miniconda3/bin:$PATH"
 endif
 # <<< conda initialize <<<
-```
