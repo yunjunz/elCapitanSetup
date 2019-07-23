@@ -1,3 +1,6 @@
+Add the following to `~/.tcshrc` file for initial terminal setup.
+
+```tcsh
 # vim: set filetype=tcsh:
 setenv VISUAL  /usr/bin/vi
 setenv CLICOLOR 1
@@ -68,15 +71,14 @@ setenv PYTHONPATH       ${PYTHONPATH}:${ARIATOOLS_HOME}/tools
 setenv PATH             ${PATH}:${ARIATOOLS_HOME}/tools/bin
 
 
-##--------- option 1 - conda ------------------## 
-#setenv PYTHON2DIR      ${DEV_DIR}/python/miniconda2
-#setenv PATH            ${PYTHON2DIR}/bin:${PATH}
+setenv GDAL_DRIVER_PATH      /opt/local/lib/gdalplugins
+setenv JAVA_HOME             /Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
+setenv VRT_SHARED_SOURCE            0
+setenv HDF5_DISABLE_VERSION_CHECK   1    # for running GIANT
+setenv HDF5_USE_FILE_LOCKING        FALSE
 
-setenv PYTHON3DIR       ${DEV_DIR}/python/miniconda3
-setenv PATH             ${PYTHON3DIR}/bin:${PATH}
-alias ipynb 'cd ~/development/python; jupyter notebook'
 
-##--------- option 2 - MacPorts ---------------##
+##--------- option 1 - MacPorts ---------------##
 # MacPorts Installer addition on 2017-09-02_at_01:27:12: adding an appropriate PATH variable for use with MacPorts.
 #setenv PATH /opt/local/bin:/opt/local/sbin:${PATH}
 #setenv MANPATH /opt/local/share/man:${MANPATH}
@@ -86,11 +88,13 @@ alias ipynb 'cd ~/development/python; jupyter notebook'
 #setenv INCLUDE_DIRS          /opt/local/include
 #setenv LIBRARY_DIRS          /opt/local/lib
 
-setenv GDAL_DRIVER_PATH      /opt/local/lib/gdalplugins
-setenv JAVA_HOME             /Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
-setenv VRT_SHARED_SOURCE            0
-setenv HDF5_DISABLE_VERSION_CHECK   1    # for running GIANT
-setenv HDF5_USE_FILE_LOCKING        FALSE
+##--------- option 2 - conda ------------------## 
+#setenv PYTHON2DIR      ${DEV_DIR}/python/miniconda2
+#setenv PATH            ${PYTHON2DIR}/bin:${PATH}
+
+setenv PYTHON3DIR       ${DEV_DIR}/python/miniconda3
+setenv PATH             ${PYTHON3DIR}/bin:${PATH}
+alias ipynb 'cd ~/development/python; jupyter notebook'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -100,4 +104,4 @@ else
     setenv PATH="/Users/yunjunz/development/python/miniconda3/bin:$PATH"
 endif
 # <<< conda initialize <<<
-
+```
