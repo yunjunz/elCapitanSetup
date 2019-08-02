@@ -59,7 +59,7 @@ setenv DEMDB            ${INSAR_HOME}/DEM
 ##--------- MintPy -----------------## 
 setenv MINTPY_HOME      ${DEV_DIR}/python/MintPy
 setenv PYTHONPATH       ${MINTPY_HOME}:${PYTHONPATH}
-setenv PATH             ${MINTPY_HOME}/mintpy:${MINTPY_HOME}/sh:${MINTPY_HOME}/isce:${PATH}
+setenv PATH             ${MINTPY_HOME}/mintpy:${PATH}
 setenv WEATHER_DIR      ${INSAR_HOME}/WEATHER
 
 ##--------- ARIA-tools -------------##
