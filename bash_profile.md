@@ -6,7 +6,7 @@ export CLICOLOR=1
 export PS1="\h:\w>$ "
 
 export DEV_DIR=~/development
-export UTILS_DIR=${DEV_DIR}/UTILITIES
+export UTILS_DIR=${DEV_DIR}/utils
 export DATA_DIR=~/data
 
 ##########################  Alias  #################################
