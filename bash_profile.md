@@ -11,8 +11,8 @@ export DATA_DIR=~/data
 
 ##########################  Alias  #################################
 alias sou='source ~/.bash_profile; echo "sourceing ~/.bash_profile"'
-alias ls='ls -GFh'
-alias ll='ls -GFhal'
+alias ls='ls --color -GFh'
+alias ll='ls --color -GFhal'
 alias m='more'
 alias rrsync='rsync -avzh --progress'
 alias rm=${UTILS_DIR}/shell-safe-rm/bin/rm.sh
