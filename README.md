@@ -17,8 +17,8 @@ Install the developer tools on macOS:
 2. Install command line tools from within XCode and agree to the terms of license.   
 
 ```bash
-> xcode-select --install -s /Applications/Xcode.app/Contents/Developer/ 
-> sudo xcodebuild -license 
+xcode-select --install -s /Applications/Xcode.app/Contents/Developer/ 
+sudo xcodebuild -license 
 ```
 
 3. Install [XQuartz](https://www.xquartz.org) (Will need to log out and log back in)
@@ -64,7 +64,7 @@ git clone https://github.com/yunjunz/pyaps3.git $PYAPS_HOME/pyaps3
 git clone https://github.com/yunjunz/macOS_Setup.git $DEV_DIR/macOS_Setup
 ```
 
-### Install dependencies via conda
+### 2.1 Install dependencies via conda
 
 Add to _**~/.bash_profile**_ file:
 
@@ -94,7 +94,7 @@ $PYTHON3DIR/bin/conda install --yes --file $DEV_DIR/macOS_Setup/conda.txt
 $PYTHON3DIR/bin/pip install git+https://github.com/tylere/pykml.git
 ```
 
-### Install dependencies via MacPorts
+### 2.2 Install dependencies via MacPorts
 
 Install [macports](https://www.macports.org/install.php). Add the following at the bottom of your _**~/.bash_profile**_ file:
 
@@ -104,7 +104,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 export MANPATH=/opt/local/share/man:${MANPATH}
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-#For py36-pyhdf in macports
+#For py37-pyhdf in macports
 export INCLUDE_DIRS=/opt/local/include
 export LIBRARY_DIRS=/opt/local/lib
 ```
@@ -112,52 +112,30 @@ export LIBRARY_DIRS=/opt/local/lib
 Update the port tree. If your network prevent the use of rsync or svn via http of port tree, try [Portfile Sync via a Snapshot Tarball](https://trac.macports.org/wiki/howto/PortTreeTarball).
 
 ```bash
-> sudo port selfupdate
+sudo port selfupdate
 ```
 
 Run the following to install ISCE core modules and dependencies for MintPy and PyAPS:
 
-
-
-##### Option 1: Automated installation  (Not extensively tested ...)
------------
-
-You can automatically install all the required ports with the following command:
-
 ```bash
-> sudo port install $(cat ports.txt)
+sudo port install $(cat ports.txt)
 ```
 
-Once you run this command, make sure you choose the right variants of active ports using the following command
+Note that pygrib is required by PyAPS but not currently supported in MacPorts with python37 yet, thus need to be installed manually from source.
+
+1. Download the latest released version:
 
 ```bash
-> sudo source post_ports.sh
+wget https://github.com/jswhit/pygrib/archive/v2.0.4rel.tar.gz
+tar -xvf v2.0.4rel.tar.gz; cd pygrib-2.0.4rel
+mv setup.cfg.template setup.cfg
 ```
 
+2. Uncomment and set grib_api installation location as: `grib_api_dir = /opt/local`.
 
-##### Option 2: Manual installation of ports (recommended)
-----------
+3. Install pygrib using pip from MacPorts.
 
-You will have to manually run series of "port install" commands.
-This option has been tested more extensively and hopefully results in fewer errors.
+```bash
+sudo -H /opt/loca/bin/pip install .
+```
 
-For instructions see [here](./macports.md)
-
-
-
-####Other programs
-------------
-
-###### Textwrangler
---------------------
-- Install textwrangler itself
-- Install textwrangler command line tools (includes twdiff for comparing files / folders)
-- twdiff appears to be better than other diff tools that are available 
-
-##### Environment modules
---------------------------
-- Follow instructions [here](./modules.md)
-
-##### You are ready to install ISCE
-------------------------------------
-- Follow instructions [here](./isceSetup.md)
