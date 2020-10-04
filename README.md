@@ -71,9 +71,11 @@ sudo port selfupdate
 sudo port install $(cat ~/tools/utils/macOS_setup/ports.txt)
 ```
 
-**Note on `pygrib`:** pygrib is required by PyAPS but not currently supported in MacPorts with python37 yet, thus need to be installed manually from source.
+#### Notes on [`pygrib`](https://github.com/jswhit/pygrib) ####
 
-Download the latest released version:
+pygrib is required by PyAPS but not currently supported in MacPorts with python37 yet, thus need to be installed manually from source.
+
+Download the [latest released version](https://github.com/jswhit/pygrib/releases):
 
 ```bash
 cd ~/tools/utils
